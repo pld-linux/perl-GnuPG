@@ -8,7 +8,7 @@ Summary:	GnuPG - Perl module to use GnuPG
 Summary(pl):	GnuPG - Obs³uga GnuPG
 Name:		perl-GnuPG
 Version:	0.09
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -49,7 +49,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README NEWS
 %{perl_sitelib}/*.pm
-%dir %{perl_sitelib}/%{pdir}/*
 %dir %{perl_sitelib}/%{pdir}/Tie/*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
