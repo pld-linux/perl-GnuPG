@@ -3,7 +3,7 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	GnuPG
+%define		pdir	GnuPG
 Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
 Summary(pl):	GnuPG - modu³ interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
