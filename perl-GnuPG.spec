@@ -11,6 +11,7 @@ Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
@@ -27,6 +28,7 @@ Niniejszy modu³ jest prób± ³atwej i naturalnej obs³ugi GnuPG.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch0
 
 %build
 perl Makefile.PL
@@ -47,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README NEWS MANIFEST
-%{perl_sitelib}/%{pdir}/*.pm
-%dir %{perl_sitelib}/%{pdir}/
+%{perl_sitelib}/*.pm
+%dir %{perl_sitelib}/%{pdir}/*
+%dir %{perl_sitelib}/%{pdir}/Tie/*
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
 %{_mandir}/man3/*
