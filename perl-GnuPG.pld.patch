@@ -1,0 +1,11 @@
+--- GnuPG.pm	Fri Jun  8 18:28:53 2001
++++ GnuPG.pm.PLD	Mon Oct 14 21:29:32 2002
+@@ -264,7 +264,7 @@
+ 	# some ends must be closed in the child.
+ 	#
+ 	# Besides this is just plain good hygiene
+-	my $max_fd = POSIX::sysconf( POSIX::_SC_OPEN_MAX ) || 256;
++	my $max_fd = POSIX::sysconf( &POSIX::_SC_OPEN_MAX ) || 256;
+ 	foreach my $f ( 3 .. $max_fd ) {
+ 	    next if $f == fileno $self->{status_fd};
+ 	    POSIX::close( $f );
