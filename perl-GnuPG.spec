@@ -8,7 +8,7 @@ Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
 Summary(pl):	GnuPG - modu³ interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
 Version:	0.09
-Release:	3
+Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
