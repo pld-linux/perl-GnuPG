@@ -8,7 +8,7 @@ Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
 Summary(pl):	GnuPG - modu³ interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
 Version:	0.09
-Release:	3
+Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
@@ -16,7 +16,7 @@ Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
 BuildRequires:	gnupg
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,7 +37,8 @@ modelu.
 %patch0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{!?_without_tests:TEST_SHARED_MEMORY=1 TEST_FILE_CACHE=1 %{__make} test}
@@ -47,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{perl_sitelib}/%{pdir}/
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/%{pdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -55,8 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README NEWS
-%{perl_sitelib}/*.pm
-%{perl_sitelib}/%{pdir}/Tie*
+%{perl_vendorlib}/*.pm
+%{perl_vendorlib}/%{pdir}/Tie*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_mandir}/man3/*
