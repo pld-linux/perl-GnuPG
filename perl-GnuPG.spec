@@ -12,6 +12,7 @@ Release:	4
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+# Source0-md5:	1c5e21d4ed9fcfe0f5b81c1043fa2cc8
 Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
 BuildRequires:	gnupg
