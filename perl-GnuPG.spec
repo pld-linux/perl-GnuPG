@@ -1,6 +1,7 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	GnuPG
 Summary:	GnuPG - Perl module to use GnuPG
@@ -15,8 +16,6 @@ Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6.1
-BuildRequires:	perl-Class-MethodMaker
-Requires:	perl-Class-MethodMaker
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -48,7 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS MANIFEST
+%doc README NEWS
 %{perl_sitelib}/*.pm
 %dir %{perl_sitelib}/%{pdir}/*
 %dir %{perl_sitelib}/%{pdir}/Tie/*
