@@ -20,7 +20,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module attempts make using HTML templates simple and natural.
+This module attempts make using GnuPG simple and natural.
 
 %description -l pl
 Niniejszy modu³ jest prób± ³atwej i naturalnej obs³ugi GnuPG.
