@@ -14,6 +14,7 @@ Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
+BuildRequires:	gnupg
 BuildRequires:	perl >= 5.6.1
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
