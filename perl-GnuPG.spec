@@ -11,7 +11,7 @@ Version:	0.09
 Release:	3
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 Patch0:		perl-GnuPG.pld.patch
 URL:		http://www.gnupg.org/
 BuildRequires:	gnupg
