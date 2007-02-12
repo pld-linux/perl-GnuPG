@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	GnuPG
 Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
-Summary(pl):	GnuPG - modu³ interfejsu perlowego do GPG (GNU Privacy Guard)
+Summary(pl.UTF-8):   GnuPG - moduÅ‚ interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
 Version:	0.09
 Release:	5
@@ -27,10 +27,10 @@ memory coprocess interface that gpg provides for its wrappers. It
 tries its best to map the interactive interface of the gpg to a more
 programmatic model.
 
-%description -l pl
-GnuPG to interfejs Perla do GPG (GNU Privacy Guard). U¿ywa interfejsu
-pamiêci dzielonej, udostêpnianego przez gpg. Próbuje jak najlepiej
-odwzorowaæ interaktywny interfejs gpg do bardziej programistycznego
+%description -l pl.UTF-8
+GnuPG to interfejs Perla do GPG (GNU Privacy Guard). UÅ¼ywa interfejsu
+pamiÄ™ci dzielonej, udostÄ™pnianego przez gpg. PrÃ³buje jak najlepiej
+odwzorowaÄ‡ interaktywny interfejs gpg do bardziej programistycznego
 modelu.
 
 %prep
