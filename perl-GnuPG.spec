@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	GnuPG
 Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
-Summary(pl.UTF-8):   GnuPG - moduł interfejsu perlowego do GPG (GNU Privacy Guard)
+Summary(pl.UTF-8):	GnuPG - moduł interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
 Version:	0.09
 Release:	5
