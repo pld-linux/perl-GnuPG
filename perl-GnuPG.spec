@@ -7,13 +7,12 @@
 Summary:	GnuPG - Perl module interface to the GNU Privacy Guard
 Summary(pl.UTF-8):	GnuPG - moduł interfejsu perlowego do GPG (GNU Privacy Guard)
 Name:		perl-GnuPG
-Version:	0.09
-Release:	6
+Version:	0.10
+Release:	1
 License:	GPL v2+
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
-# Source0-md5:	1c5e21d4ed9fcfe0f5b81c1043fa2cc8
-Patch0:		perl-GnuPG.pld.patch
+# Source0-md5:	b7a41e7364c1e923f28af285adabe467
 URL:		http://www.gnupg.org/
 BuildRequires:	gnupg
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -35,7 +34,6 @@ modelu.
 
 %prep
 %setup -q -n %{pdir}-%{version}
-%patch0
 
 %build
 %{__perl} Makefile.PL \
